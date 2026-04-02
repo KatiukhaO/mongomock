@@ -1,4 +1,5 @@
 import warnings
+from typing import Any
 
 from packaging import version
 
@@ -111,7 +112,7 @@ class Database:
             'mongomock yet.'
         )
 
-    def list_collection_names(self, filter=None, session=None):
+    def list_collection_names(self, filter=None, session=None, **kwargs: Any):
         """filter: only name field type with eq,ne or regex operator
 
         session: not supported
